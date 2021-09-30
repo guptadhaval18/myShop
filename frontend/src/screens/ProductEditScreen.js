@@ -53,7 +53,7 @@ const ProductEditScreen = ({ match, history }) => {
   }, [dispatch, history, productId, product, successUpdate])
 
   const uploadFileHandler = async (e) => {
-    const file = e.target.files[0]
+    const file = e.target.files[0] //as we can upload multiple files. This select 1st file to upload.
     const formData = new FormData()
     formData.append('image', file)
     setUploading(true)
